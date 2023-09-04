@@ -1,34 +1,46 @@
-#include <iostream>
-#include <string>
+#include<iostream>
 using namespace std;
-int main()
+void CalCircle()
 {
-	int F,S,T,mid,final;
-	float QTotal;
-	string score;
-	cout<<"Enter first  quizz  (10) : ";
-	cin>> F;
-	cout<<"Enter second quizz  (10) : ";
-	cin>>S;
-	cout<<"Enter third  quizz  (10) : ";
-	cin>>T;
-	cout<<"==========mid-term==========="<<endl;
-	cout<<"Enter mid-term (40) : ";
-	cin>>mid;
-	cout<<"==========FINAL=============="<<endl;
-	cout<<"Enter final (50) : ";
-	cin>>final;
-	cout << "Quizz Total:";
-	cin >> QTotal;
-	cout << "Mid term:";
-	cin >> mid;
-	cout << "Final:";
-	cin >> final;
-	cout << "Total:" << final+QTotal+mid << endl;
-	T = final+QTotal+mid;
-	cout << "Your score is " <<  ((T>=50)? "PASS ":"FAIL ") << endl;
-	system ("pause");
-	return (0);
+float Radius,Area,Circumference;
+cout<<"Input radius :";
+cin>>Radius;
+Area = 3.14f*Radius*Radius;
+Circumference =2*3.14f*Radius;
+cout<<endl;
+cout << "Area of circle : " << Area << endl;
+cout << "Circumference of circle : " << Circumference << endl;
+cout << "Diameter of circle : " << (2*Radius) << endl;
+}
+void Rectangle()
+{
+int sum;
+float high,wide;
+cout<<"Input High :"<<endl;
+cin>>high;
+cout<<"Input Wide :"<<endl;
+cin>>wide;
+sum = high*wide;
+cout<<"Area of circle :"<<sum<<endl;
+}
 
+int main()
+{	char Ch;
+	do{ 
+		
+		cout<<"Program Calculate of Circl."<<endl;
+		cout<<"**************************"<<endl;
+		cout<<"1.Circle"<<endl;
+		cout<<"2.Rectangle"<<endl;
+		cout<<"3.Exit"<<endl;
+		cout<<"Choose Menu :";
+		cin>>Ch;
+		if(Ch == '1')CalCircle();
+		else if(Ch == '2')Rectangle();
+		else if(Ch =='3')cout<<"Exit"<<endl;
+	}while(Ch != '3');
+		system("pause");
+return(0);
 
 }
+
